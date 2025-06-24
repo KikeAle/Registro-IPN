@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>IPN Voca 3 – Sitio Completo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://kit.fontawesome.com/a2d90f814e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Encabezado IPN VOCA 3 -->
+<header class="encabezado-ipn">
+  <div class="encabezado-contenido">
+   
+    <div class="titulo-ipn">
+
+      <h1>IPN</h1>
+      <h2>Centro de Estudios Científicos y Tecnológicos No. 3</h2>
+      <h3>VOCACIONAL 3 - VOCA 3</h3>
+    </div>
+    
+  </div>
+
+  <!-- Menú debajo del encabezado -->
+ 
+</header>
+
+  <style>
+    body,html{margin:0;padding:0;font-family:'Roboto',sans-serif;}
+    .top-header{display:flex;justify-content:space-between;align-items:center;background:#ddd;padding:5px 20px;}
+    .logo-gob, .logo-ipn { height:50px; }
+    .site-header{background:#682444;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;position:sticky;top:0;z-index:100;}
+    .main-nav{list-style:none;display:flex;margin:0;padding:0;}
+    .main-nav li{margin-left:15px;}
+    .main-nav a{color:#fff;text-decoration:none;font-weight:bold;}
+    .objetivo {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+}
+/* Tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Playfair+Display:wght@600&display=swap');
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ENCABEZADO ROJO DESVANECIDO */
+.encabezado-ipn {
+  background: linear-gradient(135deg, #682444, #8a2d5a, #b04860);
+  color: #fff;
+  padding: 30px 20px 10px;
+  text-align: center;
+  animation: fadeInDown 1s ease-out;
+}
+
+.encabezado-contenido {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* LOGOS */
+.logo-ipn {
+  width: 120px;
+  max-width: 100%;
+  animation: zoomIn 1s ease;
+}
+
+/* TÍTULOS ANIMADOS */
+.titulo-ipn h1 {
+  font-size: 3em;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: #ffd700;
+  animation: colorPulse 2s infinite;
+}
+
+.titulo-ipn h2, .titulo-ipn h3 {
+  margin: 5px 0;
+  font-size: 1.5em;
+  color: #fff;
+  animation: fadeIn 2s ease;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rajdhani', sans-serif;
+  background: linear-gradient(135deg, #682444, #8a2d5a, #b04860);
+  color: #fff;
+}
+
+.formulario-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #ffffffee;
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+form h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #682444;
+  margin-bottom: 25px;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #682444;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-botones button {
+  flex: 1;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#hechoBtn {
+  background-color: #682444;
+  color: #fff;
+}
+
+#hechoBtn:hover {
+  background-color: #8a2d5a;
+}
+
+#siguienteBtn {
+  background-color: #ccc;
+  color: #555;
+}
+
+#siguienteBtn:enabled {
+  background-color: #682444;
+  color: white;
+}
+
+#siguienteBtn:enabled:hover {
+  background-color: #8a2d5a;
+}
+</style>
+<div class="formulario-container">
+  <form id="registroForm">
+    <h2>Formulario de Registro IPN</h2>
+
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="text" name="apellido" placeholder="Apellidos" required>
+    <input type="email" name="correo" placeholder="Correo electrónico" required>
+    <input type="password" name="contrasena" placeholder="Contraseña" minlength="6" required>
+    <input type="password" name="confirmar" placeholder="Confirmar contraseña" minlength="6" required>
+    <input type="tel" name="telefono" placeholder="Teléfono (10 dígitos)" pattern="^\d{10}$" required>
+    <input type="text" name="curp" placeholder="CURP (opcional)" pattern="^[A-Z]{4}\d{6}[HM][A-Z]{5}[0-9A-Z]\d{1}$">
+    <input type="text" name="ciudad" placeholder="Ciudad" required>
+    <input type="text" name="estado" placeholder="Estado" required>
+    <textarea name="comentarios" placeholder="¿Por qué quieres unirte al IPN?" required></textarea>
+
+    <div class="form-botones">
+      <button type="button" id="hechoBtn">Hecho</button>
+      <button type="submit" id="siguienteBtn" disabled>Siguiente</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  const hechoBtn = document.getElementById("hechoBtn");
+  const siguienteBtn = document.getElementById("siguienteBtn");
+
+  hechoBtn.addEventListener("click", function () {
+    const form = document.getElementById("registroForm");
+    const password = form.contrasena.value;
+    const confirmar = form.confirmar.value;
+
+    if (!form.checkValidity()) {
+      alert("Por favor, completa todos los campos correctamente.");
+    } else if (password !== confirmar) {
+      alert("Las contraseñas no coinciden.");
+    } else {
+      siguienteBtn.disabled = false;
+      alert("¡Formulario verificado! Ahora puedes continuar.");
+    }
+  });
+
+  document.getElementById("registroForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    window.location.href = "https://kikeale.github.io/Principal-IPN.git"; // Cambia a tu URL real
+  });
+</script>
